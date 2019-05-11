@@ -28,3 +28,4 @@
 [17-Apr-2019 06:27:46 UTC] PHP Parse error:  syntax error, unexpected 've' (T_STRING) in /home/kaladevelopment/public_html/coop/hostel/application/config/config.php on line 65
 [17-Apr-2019 06:27:46 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
 [17-Apr-2019 06:34:37 UTC] PHP Parse error:  syntax error, unexpected 've' (T_STRING) in /home/kaladevelopment/public_html/coop/hostel/application/config/config.php on line 65
+[11-May-2019 01:36:05 UTC] PHP Parse error:  syntax error, unexpected 'var' (T_VAR), expecting ';' in /home/kaladevelopment/public_html/coop/hostel/application/modules/admin/views/dashboard/dashboard.php on line 321

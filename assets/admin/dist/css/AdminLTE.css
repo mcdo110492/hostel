@@ -4926,3 +4926,7 @@ table.text-center th {
     white-space: normal !important;
   }
 }
+
+body.skin-blue.sidebar-mini div.wrapper div.content-wrapper div.container div.alert.alert-info.alert-dismissable.col-md-11{
+	display: none;
+}

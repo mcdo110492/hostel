@@ -4044,3 +4044,7 @@ table.text-center, table.text-center td, table.text-center th {
 		white-space: normal!important;
 	}
 }
+
+div.container div.alert.alert-info.alert-dismissable.col-md-11{
+	display:none !important;
+}
