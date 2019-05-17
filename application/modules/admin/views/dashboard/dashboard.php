@@ -213,7 +213,7 @@
                 <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
                 <div class="info-box-content">
                   <span class="info-box-text"><?php echo lang('active_coupons')?></span>
-                  <span class="info-box-number"><?php echo count('coupons')?></span>
+                  <span class="info-box-number"><?php echo count($coupons)?></span>
                   
                 </div><!-- /.info-box-content -->
               </div><!-- /.info-box -->

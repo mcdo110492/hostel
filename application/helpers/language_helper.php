@@ -29,31 +29,47 @@
  * @package	CodeIgniter
  * @author	EllisLab Dev Team
  * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
- * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (http://bcit.ca/)
- * @license	http://opensource.org/licenses/MIT	MIT License
+ * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
+ * @license	https://opensource.org/licenses/MIT	MIT License
  * @link	https://codeigniter.com
- * @since	Version 3.0.0
+ * @since	Version 1.0.0
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * SessionHandlerInterface
+ * CodeIgniter Language Helpers
  *
- * PHP 5.4 compatibility interface
- *
- * @package	CodeIgniter
- * @subpackage	Libraries
- * @category	Sessions
- * @author	Andrey Andreev
- * @link	https://codeigniter.com/user_guide/libraries/sessions.html
+ * @package		CodeIgniter
+ * @subpackage	Helpers
+ * @category	Helpers
+ * @author		EllisLab Dev Team
+ * @link		https://codeigniter.com/user_guide/helpers/language_helper.html
  */
-interface SessionHandlerInterface {
 
-	public function open($save_path, $name);
-	public function close();
-	public function read($session_id);
-	public function write($session_id, $session_data);
-	public function destroy($session_id);
-	public function gc($maxlifetime);
+// ------------------------------------------------------------------------
+
+if ( ! function_exists('lang'))
+{
+	/**
+	 * Lang
+	 *
+	 * Fetches a language variable and optionally outputs a form label
+	 *
+	 * @param	string	$line		The language line
+	 * @param	string	$for		The "for" value (id of the form element)
+	 * @param	array	$attributes	Any additional HTML attributes
+	 * @return	string
+	 */
+	function lang($line, $for = '', $attributes = array())
+	{
+		$line = get_instance()->lang->line($line);
+
+		if ($for !== '')
+		{
+			$line = '<label for="'.$for.'"'._stringify_attributes($attributes).'>'.$line.'</label>';
+		}
+
+		return $line;
+	}
 }

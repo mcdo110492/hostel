@@ -152,13 +152,13 @@ $db['default'] = array(
 
 	'dsn'	=> '',
 
-	'hostname' => 'localhost',
+	'hostname' => '127.0.0.1',
 
-	'username' => 'kaladevelopment_hostel',
+	'username' => 'root',
 
-	'password' => 'hostel12341!',
+	'password' => 'mcdonald1!',
 
-	'database' => 'kaladevelopment_dbhostel',
+	'database' => 'coop_hostel',
 
 	'dbdriver' => 'mysqli',
 

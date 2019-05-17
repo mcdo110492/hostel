@@ -81,9 +81,9 @@ class Homepage extends Front_Controller {
 			$params['recipient'] = $save['email'];
 			$params['subject'] 	 = $row['subject'];
 			$params['message']   = $msg;
-			$this->mailer->send($params);
+			//$this->mailer->send($params);
 			
-			$this->session->set_flashdata('message', 'You Signup In Successfully');
+			$this->session->set_flashdata('message', 'You Signup Successfully');
 			if($id){
 				$return 	=	$this->login_model->auth($save['email'],$password,'','');
 			}

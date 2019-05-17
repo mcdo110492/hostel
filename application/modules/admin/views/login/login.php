@@ -26,12 +26,16 @@
 <body class="login-page">
 	
 			<?php 
-			
-				if($this->session->flashdata('message'))
-						$message = $this->session->flashdata('message');
-				  if($this->session->flashdata('error'))
-						$error  = $this->session->flashdata('error');
-					if(function_exists('validation_errors') && validation_errors() != '')
+  
+        if($this->session->flashdata('message'))
+        {
+          $message = $this->session->flashdata('message');
+        }
+         else if($this->session->flashdata('error'))
+         {  
+          $error  = $this->session->flashdata('error');
+         }
+					else if (function_exists('validation_errors') && validation_errors() != '')
 					{
 						$error  = validation_errors();
 					}
@@ -65,7 +69,7 @@
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
-        <?php echo form_open('admin/login') ?>
+        <?php echo form_open('admin/login/authenticate') ?>
     		  <div class="form-group has-feedback">
 		  	
 			<?php echo form_input(array('name'=>'username', 'class'=>'form-control','placeholder'=>'Username')); ?>

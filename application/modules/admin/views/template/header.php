@@ -1,4 +1,5 @@
-<?php $admin	=	$this->session->userdata('admin');
+<?php
+$admin	=	$this->session->userdata('admin');
 $user	=	$this->auth->get_admin($admin['id']);
 $this->load->model(array('language_model','booking_model'));
 $langs	= $this->language_model->get_all();

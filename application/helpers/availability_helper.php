@@ -18,7 +18,7 @@
 						//echo '<pre>'; print_r($room_type);die;
 						
 											$CI->db->where('room_type_id',$room_type_id);
-											$CI->db->select('rooms.*,count(room_no) as total_rooms');
+											$CI->db->select('rooms.*, room_no as total_rooms');
 						$rooms	  	=	$CI->db->get('rooms')->row_array();
 						$total_rooms	=	$rooms['total_rooms'];
 						//echo '<pre>'; print_r($rooms);die;
@@ -52,7 +52,8 @@
 							//echo $total_rooms;die; 
 							if($total_rooms > 0){
 								//echo count($orders);die;
-								if(count($orders) >= $total_rooms){
+								$countOrders = ($orders == NULL) ? 0 : $orders;
+								if(count($countOrders) >= $total_rooms){
 									$CI->session->unset_userdata('booking_data');
 									$CI->session->unset_userdata('coupon_data');
 									$CI->session->set_flashdata('error', "Sorry.. This Dates Between Rooms Not Available Please Try With Another Date Or Room");
@@ -86,7 +87,7 @@
 						//echo '<pre>'; print_r($room_type);die;
 						
 											$CI->db->where('room_type_id',$room_type_id);
-											$CI->db->select('rooms.*,count(room_no) as total_rooms');
+											$CI->db->select('rooms.*, room_no as total_rooms');
 						$rooms	  	=	$CI->db->get('rooms')->row_array();
 						$total_rooms	=	$rooms['total_rooms'];
 						//echo '<pre>'; print_r($rooms);die;
@@ -114,10 +115,11 @@
 											$CI->db->where('R.date',$date);
 											$CI->db->select('R.*,');
 											$CI->db->join('orders O', 'O.id = R.order_id', 'LEFT');
-						$orders	  	=	$CI->db->get('rel_orders_prices R')->result_array();
+							$orders	  	=	$CI->db->get('rel_orders_prices R')->result_array();
 							//echo $total_rooms;die; 
 							if($total_rooms > 0){
-								if(count($orders) > $total_rooms){
+								$countOrders = ($orders == NULL) ? 0 : $orders;
+								if(count($countOrders) > $total_rooms){
 									$CI->session->unset_userdata('booking_data');
 									$CI->session->unset_userdata('coupon_data');
 									return 'Sorry.. This Dates Between Rooms Not Available Please Try With Another Date Or Room';

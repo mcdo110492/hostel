@@ -2,7 +2,7 @@
 Class Dashboard_model extends CI_Model
 {
 
-    var $CI;
+    public $CI;
 
     function __construct()
     {

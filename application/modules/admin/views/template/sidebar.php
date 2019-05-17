@@ -21,34 +21,34 @@ $user	=	$this->auth->get_admin($admin['id']);
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="<?php echo ($this->uri->segment(2)=='dashboard')?'active':''?>"><a href="<?php echo site_url('admin/dashboard')?>"><i class="fa fa-dashboard"></i> <span><?php echo lang('dashboard');?></span></a></li>
-		<li class="<?php echo ($this->uri->segment(2)=='bookings')?'active':''?>"><a href="<?php echo site_url('admin/bookings')?>"><i class="fa fa-list-alt"></i> <span><?php echo lang('bookings');?></span></a></li>
-		<li class="<?php echo ($this->uri->segment(2)=='guests')?'active':''?>"><a href="<?php echo site_url('admin/guests')?>"><i class="fa fa-users"></i> <span><?php echo lang('guests');?></span></a></li>
+        <li class="<?php echo ($this->uri->segment(2)=='dashboard')?'active':''?>"><a href="<?php echo site_url('admin/dashboard')?>"><i class="fa fa-dashboard"></i> <span><?php echo 'Dashboard';?></span></a></li>
+		<li class="<?php echo ($this->uri->segment(2)=='bookings')?'active':''?>"><a href="<?php echo site_url('admin/bookings')?>"><i class="fa fa-list-alt"></i> <span><?php echo 'Bookings';?></span></a></li>
+		<li class="<?php echo ($this->uri->segment(2)=='guests')?'active':''?>"><a href="<?php echo site_url('admin/guests')?>"><i class="fa fa-users"></i> <span><?php echo 'Guests';?></span></a></li>
 		
-		<li class="<?php echo ($this->uri->segment(2)=='menus')?'active':''?>"><a href="<?php echo site_url('admin/menus')?>"><i class="fa fa-bars"></i> <span><?php echo lang('menus');?></span></a></li>
-		<li class="<?php echo ($this->uri->segment(2)=='calendar')?'active':''?>"><a href="<?php echo site_url('admin/calendar')?>"><i class="fa fa-calendar"></i> <span><?php echo lang('availability_calendar');?></span></a></li>
+		<li class="<?php echo ($this->uri->segment(2)=='menus')?'active':''?>"><a href="<?php echo site_url('admin/menus')?>"><i class="fa fa-bars"></i> <span><?php echo 'Menus';?></span></a></li>
+		<li class="<?php echo ($this->uri->segment(2)=='calendar')?'active':''?>"><a href="<?php echo site_url('admin/calendar')?>"><i class="fa fa-calendar"></i> <span><?php echo 'Availability Calendar';?></span></a></li>
 		
-		<li class="<?php echo ($this->uri->segment(2)=='housekeeping')?'active':''?> hide"><a href="<?php echo site_url('admin/housekeeping')?>"><i class="fa fa-home"></i> <span><?php echo lang('housekeeping');?></span></a></li>
+		<li class="<?php echo ($this->uri->segment(2)=='housekeeping')?'active':''?> hide"><a href="<?php echo site_url('admin/housekeeping')?>"><i class="fa fa-home"></i> <span><?php echo 'Housekeeping';?></span></a></li>
 		
 		
 		<li class="treeview <?php echo($this->uri->segment(2)=='room_types' || $this->uri->segment(2)=='rooms' || $this->uri->segment(2)=='services' ||$this->uri->segment(2)=='coupons' || $this->uri->segment(2)=='price_manager' || $this->uri->segment(2)=='floors' || $this->uri->segment(2)=='amenities')?'active':'';?>">
           <a href="#">
             <i class="fa fa-cubes"></i>
-            <span><?php echo lang('hotel_configration')?></span>
+            <span><?php echo 'Hotel Configuration';?></span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-			<li class="<?php echo ($this->uri->segment(2)=='room_types')?'active':''?>"><a href="<?php echo site_url('admin/room_types')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('room_types');?></span></a></li>
-		<li class="<?php echo ($this->uri->segment(2)=='rooms')?'active':''?>"><a href="<?php echo site_url('admin/rooms')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('rooms');?></span></a></li>
-		<li class="<?php echo ($this->uri->segment(2)=='price_manager')?'active':''?>"><a href="<?php echo site_url('admin/price_manager')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('price_manager');?></span></a></li>
-		<li class="<?php echo ($this->uri->segment(2)=='services')?'active':''?>"><a href="<?php echo site_url('admin/services')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('paid_services');?></span></a></li>
-		<li class="<?php echo ($this->uri->segment(2)=='coupons')?'active':''?>"><a href="<?php echo site_url('admin/coupons')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('coupon_management');?></span></a></li>
+			<li class="<?php echo ($this->uri->segment(2)=='room_types')?'active':''?>"><a href="<?php echo site_url('admin/room_types')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Room Types';?></span></a></li>
+		<li class="<?php echo ($this->uri->segment(2)=='rooms')?'active':''?>"><a href="<?php echo site_url('admin/rooms')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Rooms';?></span></a></li>
+		<li class="<?php echo ($this->uri->segment(2)=='price_manager')?'active':''?>"><a href="<?php echo site_url('admin/price_manager')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Price Manager';?></span></a></li>
+		<li class="<?php echo ($this->uri->segment(2)=='services')?'active':''?>"><a href="<?php echo site_url('admin/services')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Paid Services';?></span></a></li>
+		<li class="<?php echo ($this->uri->segment(2)=='coupons')?'active':''?>"><a href="<?php echo site_url('admin/coupons')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Coupon Management';?></span></a></li>
 		
-		<li class="<?php echo ($this->uri->segment(2)=='floors')?'active':''?>"><a href="<?php echo site_url('admin/floors')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('floors');?></span></a></li>
-			<li class="<?php echo ($this->uri->segment(2)=='amenities')?'active':''?>"><a href="<?php echo site_url('admin/amenities')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('amenities');?></span></a></li>
-			<li class="<?php echo ($this->uri->segment(2)=='housekepping_status')?'active':''?>"><a href="<?php echo site_url('admin/housekepping_status')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('housekeping_status');?></span></a></li>
+		<li class="<?php echo ($this->uri->segment(2)=='floors')?'active':''?>"><a href="<?php echo site_url('admin/floors')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Floors';?></span></a></li>
+			<li class="<?php echo ($this->uri->segment(2)=='amenities')?'active':''?>"><a href="<?php echo site_url('admin/amenities')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Amenities';?></span></a></li>
+			<li class="<?php echo ($this->uri->segment(2)=='housekepping_status')?'active':''?>"><a href="<?php echo site_url('admin/housekepping_status')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Housekeeping Status';?></span></a></li>
 		  </ul>
         </li>
 		
@@ -57,66 +57,66 @@ $user	=	$this->auth->get_admin($admin['id']);
 		<li class="treeview <?php echo($this->uri->segment(2)=='reports')?'active':'';?>">
           <a href="#">
             <i class="fa fa-th-list"></i>
-            <span><?php echo lang('reports')?></span>
+            <span><?php echo 'Reports';?></span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-			<li class="<?php echo($this->uri->segment(3)=='occupancy')?'active':'';?>"><a href="<?php echo site_url('admin/reports/occupancy')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('occupancy');?></span></a></li>
-			<li class="<?php echo($this->uri->segment(3)=='guest')?'active':'';?>"><a href="<?php echo site_url('admin/reports/guest')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('guest');?></span></a></li>
-			<li class="<?php echo($this->uri->segment(3)=='financial')?'active':'';?>"><a href="<?php echo site_url('admin/reports/financial')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('financial');?></span></a></li>
-			<li class="<?php echo($this->uri->segment(3)=='coupon')?'active':'';?>"><a href="<?php echo site_url('admin/reports/coupon')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('coupon');?></span></a></li>
-			<li class="<?php echo($this->uri->segment(3)=='expenses')?'active':'';?>"><a href="<?php echo site_url('admin/reports/expenses')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('expenses');?></span></a></li>
+			<li class="<?php echo($this->uri->segment(3)=='occupancy')?'active':'';?>"><a href="<?php echo site_url('admin/reports/occupancy')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Occupancy';?></span></a></li>
+			<li class="<?php echo($this->uri->segment(3)=='guest')?'active':'';?>"><a href="<?php echo site_url('admin/reports/guest')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Guest';?></span></a></li>
+			<li class="<?php echo($this->uri->segment(3)=='financial')?'active':'';?>"><a href="<?php echo site_url('admin/reports/financial')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Financial';?></span></a></li>
+			<li class="<?php echo($this->uri->segment(3)=='coupon')?'active':'';?>"><a href="<?php echo site_url('admin/reports/coupon')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Coupon';?></span></a></li>
+			<li class="<?php echo($this->uri->segment(3)=='expenses')?'active':'';?>"><a href="<?php echo site_url('admin/reports/expenses')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Expenses';?></span></a></li>
 		 </ul>
         </li>
 		
-		<li class="treeview <?php echo($this->uri->segment(2)=='employees' || $this->uri->segment(2)=='departments' ||$this->uri->segment(2)=='designation')?'active':'';?>">
+		<!-- <li class="treeview <?php echo($this->uri->segment(2)=='employees' || $this->uri->segment(2)=='departments' ||$this->uri->segment(2)=='designation')?'active':'';?>">
           <a href="#">
             <i class="fa fa-users"></i>
-            <span><?php echo lang('hr_management')?></span>
+            <span><?php echo 'Hr Management'?></span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-			<li class="<?php echo($this->uri->segment(2)=='employees')?'active':'';?>"><a href="<?php echo site_url('admin/employees')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('employees');?></span></a></li>
-			<li class="<?php echo($this->uri->segment(2)=='departments')?'active':'';?>"><a href="<?php echo site_url('admin/departments')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('departments');?></span></a></li>
-			<li class="<?php echo($this->uri->segment(2)=='designation')?'active':'';?>"><a href="<?php echo site_url('admin/designation')?>"><i class="fa fa-circle-o"></i><span><?php echo lang('designations');?></span></a></li>
+			<li class="<?php echo($this->uri->segment(2)=='employees')?'active':'';?>"><a href="<?php echo site_url('admin/employees')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Employees';?></span></a></li>
+			<li class="<?php echo($this->uri->segment(2)=='departments')?'active':'';?>"><a href="<?php echo site_url('admin/departments')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Departments';?></span></a></li>
+			<li class="<?php echo($this->uri->segment(2)=='designation')?'active':'';?>"><a href="<?php echo site_url('admin/designation')?>"><i class="fa fa-circle-o"></i><span><?php echo 'Designation';?></span></a></li>
 			  </ul>
-        </li>
+    </li> -->
 		<li class="treeview <?php echo($this->uri->segment(2)=='pages' || $this->uri->segment(2)=='mail_templates' || $this->uri->segment(2)=='banners' ||$this->uri->segment(2)=='gallery'||$this->uri->segment(2)=='gallery_categories')?'active':'';?>">
           <a href="#">
             <i class="fa fa-suitcase"></i>
-            <span><?php echo lang('cms')?></span>
+            <span><?php echo 'CMS'?></span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-			<li class="<?php echo ($this->uri->segment(2)=='pages')?'active':''?>"><a href="<?php echo site_url('admin/pages')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('pages');?></span></a></li>
-			<li class="<?php echo ($this->uri->segment(2)=='banners')?'active':''?>"><a href="<?php echo site_url('admin/banners')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('banners');?></span></a></li>
-		 	<li class="<?php echo ($this->uri->segment(2)=='gallery')?'active':''?>"><a href="<?php echo site_url('admin/gallery')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('gallery');?></span></a></li>
-			<li class="<?php echo ($this->uri->segment(2)=='mail_templates')?'active':''?>"><a href="<?php echo site_url('admin/mail_templates')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('mail_templates');?></span></a></li>
+			<li class="<?php echo ($this->uri->segment(2)=='pages')?'active':''?>"><a href="<?php echo site_url('admin/pages')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Pages';?></span></a></li>
+			<li class="<?php echo ($this->uri->segment(2)=='banners')?'active':''?>"><a href="<?php echo site_url('admin/banners')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Banners';?></span></a></li>
+		 	<li class="<?php echo ($this->uri->segment(2)=='gallery')?'active':''?>"><a href="<?php echo site_url('admin/gallery')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Gallery';?></span></a></li>
+			<li class="<?php echo ($this->uri->segment(2)=='mail_templates')?'active':''?>"><a href="<?php echo site_url('admin/mail_templates')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Mail Templates';?></span></a></li>
 		  </ul>
         </li>
 		<li class="treeview <?php echo($this->uri->segment(2)=='settings' || $this->uri->segment(2)=='languages' || $this->uri->segment(2)=='currency' ||$this->uri->segment(2)=='locations'||$this->uri->segment(2)=='taxes'||$this->uri->segment(2)=='testimonials')?'active':'';?>">
           <a href="#">
             <i class="fa fa-cogs"></i>
-            <span><?php echo lang('administrative')?></span>
+            <span><?php echo 'Administrative' ?></span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-			<li class="<?php echo ($this->uri->segment(2)=='settings')?'active':''?>"><a href="<?php echo site_url('admin/settings')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('settings');?></span></a></li>
+			<li class="<?php echo ($this->uri->segment(2)=='settings')?'active':''?>"><a href="<?php echo site_url('admin/settings')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Settings';?></span></a></li>
         
-			<li class="<?php echo ($this->uri->segment(2)=='languages')?'active':''?>"><a href="<?php echo site_url('admin/languages')?>"><i class="fa fa-circle-o"></i><span><?php echo lang('languages');?></span></a></li>
-			<li class="<?php echo ($this->uri->segment(2)=='currency')?'active':''?>"><a href="<?php echo site_url('admin/currency')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('currency');?></span></a></li>
-			<li class="<?php echo ($this->uri->segment(2)=='locations')?'active':''?>"><a href="<?php echo site_url('admin/locations')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('locations');?></span></a></li>
+			<li class="<?php echo ($this->uri->segment(2)=='languages')?'active':''?>"><a href="<?php echo site_url('admin/languages')?>"><i class="fa fa-circle-o"></i><span><?php echo 'Languages';?></span></a></li>
+			<li class="<?php echo ($this->uri->segment(2)=='currency')?'active':''?>"><a href="<?php echo site_url('admin/currency')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Currencies';?></span></a></li>
+			<li class="<?php echo ($this->uri->segment(2)=='locations')?'active':''?>"><a href="<?php echo site_url('admin/locations')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Locations';?></span></a></li>
 			
-			<li class="<?php echo ($this->uri->segment(2)=='taxes')?'active':''?>"><a href="<?php echo site_url('admin/taxes')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('tax_manager');?></span></a></li>
-			<li class="<?php echo ($this->uri->segment(2)=='testimonials')?'active':''?>"><a href="<?php echo site_url('admin/testimonials')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('testimonials');?></span></a></li>
+			<li class="<?php echo ($this->uri->segment(2)=='taxes')?'active':''?>"><a href="<?php echo site_url('admin/taxes')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Tax Manager';?></span></a></li>
+			<li class="<?php echo ($this->uri->segment(2)=='testimonials')?'active':''?>"><a href="<?php echo site_url('admin/testimonials')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Testimonials';?></span></a></li>
 			
 			
 		  </ul>
@@ -124,14 +124,14 @@ $user	=	$this->auth->get_admin($admin['id']);
 		<li class="treeview <?php echo($this->uri->segment(2)=='expenses' || $this->uri->segment(2)=='expenses_category')?'active':'';?>">
           <a href="#">
             <i class="fa fa-tags"></i>
-            <span><?php echo lang('expenses')?></span>
+            <span><?php echo 'Expenses'?></span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-			<li class="<?php echo ($this->uri->segment(2)=='expenses')?'active':''?>"><a href="<?php echo site_url('admin/expenses')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('expenses');?></span></a></li>
-			<li class="<?php echo ($this->uri->segment(2)=='expenses_category')?'active':''?>"><a href="<?php echo site_url('admin/expenses_category')?>"><i class="fa fa-circle-o"></i> <span><?php echo lang('expenses_category');?></span></a></li>
+			<li class="<?php echo ($this->uri->segment(2)=='expenses')?'active':''?>"><a href="<?php echo site_url('admin/expenses')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Expenses';?></span></a></li>
+			<li class="<?php echo ($this->uri->segment(2)=='expenses_category')?'active':''?>"><a href="<?php echo site_url('admin/expenses_category')?>"><i class="fa fa-circle-o"></i> <span><?php echo 'Expenses Category';?></span></a></li>
 		  </ul>
         </li>
         

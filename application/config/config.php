@@ -48,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 */
 
-$config['base_url'] = 'http://kaladevelopment.com/coop/hostel';
+$config['base_url'] = 'http://localhost/hostel-git/hostel';//'http://kaladevelopment.com/coop/hostel';
 
 
 

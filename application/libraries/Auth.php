@@ -2,13 +2,14 @@
 
 class Auth
 {
-    var $CI;
+    public $CI;
 
     function __construct()
     {
         $this->CI =& get_instance();
         $this->CI->load->database();
         $this->CI->load->helper('url');
+        
     }
     
 	function check_session()
@@ -28,7 +29,6 @@ class Auth
         */
         
         $admin = $this->CI->session->userdata('admin');
-        
         $this->CI->db->select('access_id');
         $this->CI->db->where('id', $admin['id']);
         $this->CI->db->limit(1);
@@ -132,7 +132,8 @@ class Auth
         $result = $this->CI->db->get('users');
         $result = $result->row_array();
         
-        if (sizeof($result) > 0)
+        $count = ($result !== NULL) ? count($result) : 0;
+        if ($count > 0)
         {
             $admin = array();
             $admin['admin'] = array();
@@ -150,14 +151,13 @@ class Auth
                 //remember the user for 6 months
                 $this->generateCookie($loginCred, strtotime('+6 months'));
             }
-
+            
             $this->CI->session->set_userdata($admin);
             return true;
         }
-        else
-        {
+        
             return false;
-        }
+        
     }
     
     private function generateCookie($data, $expire)

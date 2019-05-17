@@ -31,6 +31,12 @@ class Currency_model extends CI_Model
 			return $this->db->get('currency')->result();
 		
 	}
+
+	function get_currency_symbol(){
+		$this->db->order_by('currency_code','ASC');
+		$this->db->where('status',1);		
+			return $this->db->get('currency')->row();
+	}
 	
 	function get_currency_by_id($id)
 	{

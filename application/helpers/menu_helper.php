@@ -213,9 +213,10 @@ function header_front_menu($array)
 		//echo '</pre>';
 		if($item['parent_id']==0){
 		    
-            $current_url =  base_url(uri_string());  
-			if(count($item['children']) > 0){ $icon=""; }else{ $icon=false;}
-			if(count($item['children']) > 0){ 
+			$current_url =  base_url(uri_string()); 
+			
+			if($item['children'] != NULL){ $icon=""; }else{ $icon=false;}
+			if($item['children'] != NULL){ 
 			     $class='class="dropdown"'; 
             }else{ 
                if($current_url == $url){
@@ -225,7 +226,7 @@ function header_front_menu($array)
                }
                  
             }
-			if(count($item['children']) > 0){ $attr='class="dropdown-toggle" data-toggle="dropdown"'; }else{ $attr=false;}
+			if($item['children'] != NULL){ $attr='class="dropdown-toggle" data-toggle="dropdown"'; }else{ $attr=false;}
 			echo '<li '.$class.'> 
 					<a  href="'.$url.'" '.$attr.'>
 						'.ucwords(@$item['label']).' 

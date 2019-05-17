@@ -6,6 +6,7 @@ class Login_model extends CI_Model
     {
         parent::__construct();
     }
+
 	function auth($email, $password, $remember=false)
     {
         // make sure the username doesn't go into the query as false or 0
@@ -21,8 +22,8 @@ class Login_model extends CI_Model
         $this->db->limit(1);
         $result = $this->db->get('guests');
         $result = $result->row_array();
-        
-        if (sizeof($result) > 0)
+        $count = ($result !== NULL) ? count($result) : 0;
+        if ($count > 0)
         {
             $admin = array();
             $admin['front_user'] = array();

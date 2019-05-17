@@ -50,7 +50,6 @@
             			<div class="reservation-grids">
             				<div class="reservation-grid-left">
             					<div class="section_room">
-            						<span class="fa fa-user"> </span>
             						<select name="adults" id="country2" onchange="change_country(this.value)" class="frm-field required">
                                         <option hidden="hidden">Adults</option>
             							<option value="1">1</option>         
@@ -68,7 +67,6 @@
             				</div>
             				<div class="reservation-grid-right">
             					<div class="section_room">
-				  		          <span class="fa fa-users"></span>
             						<select name="kids" id="country3" onchange="change_country(this.value)" class="frm-field required">
                                         <option hidden="hidden">Kids</option>
             							<option value="1">1</option>         
